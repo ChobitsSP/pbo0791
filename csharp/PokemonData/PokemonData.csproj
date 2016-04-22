@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4ECDB88E-83F5-4385-9181-6A32B51E767A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>PokemonData</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PokemonBattle.PokemonData</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Compile Include="PokemonData\IDataProvider.cs" />
+    <Compile Include="PokemonData\Custom\UpdatePokemonData.cs" />
+    <Compile Include="PokemonData\Custom\CustomPokemonData.cs" />
+    <Compile Include="PokemonData\Custom\CustomDataInfo.cs" />
+    <Compile Include="PokemonData\TeamData.cs" />
+    <Compile Include="PokemonData\Custom\CustomGameData.cs" />
+    <Compile Include="PokemonData\BattleData.cs" />
+    <Compile Include="PokemonData\Weather.cs" />
+    <Compile Include="PokemonData\PokemonGender.cs" />
+    <Compile Include="PokemonData\PokemonGenderRestriction.cs" />
+    <Compile Include="PokemonData\PokemonCharacter.cs" />
+    <Compile Include="PokemonData\MoveType.cs" />
+    <Compile Include="PokemonData\MoveTarget.cs" />
+    <Compile Include="PokemonData\MoveEffect.cs" />
+    <Compile Include="PokemonData\MoveAdditionalEffect.cs" />
+    <Compile Include="PokemonData\Trait.cs" />
+    <Compile Include="PokemonData\Item.cs" />
+    <Compile Include="PokemonData\EggGroup.cs" />
+    <Compile Include="PokemonData\MoveLearnData.cs" />
+    <Compile Include="PokemonData\MoveData.cs" />
+    <Compile Include="PokemonData\PokemonCustomInfo.cs" />
+    <Compile Include="PokemonData\PokemonData.cs" />
+    <Compile Include="PokemonData\Type.cs" />
+    <Compile Include="PokemonData\XmlFormatter.cs" />
+  </ItemGroup>
+</Project>

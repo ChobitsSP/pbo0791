@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkLib", "NetworkLib\NetworkLib.csproj", "{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleNetwork", "BattleNetwork\BattleNetwork.csproj", "{55A26A21-A7A8-4BC4-A380-8DBE2BDFB561}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonData", "PokemonData\PokemonData.csproj", "{4ECDB88E-83F5-4385-9181-6A32B51E767A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkLib", "NetworkLib\NetworkLib.csproj", "{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomClient", "RoomClient\RoomClient.csproj", "{6AFA18E4-94A3-429F-877B-65E30FC84CF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonData", "PokemonData\PokemonData.csproj", "{4ECDB88E-83F5-4385-9181-6A32B51E767A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +15,18 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Debug|x86.ActiveCfg = Debug|x86
-		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Debug|x86.Build.0 = Debug|x86
-		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Release|x86.ActiveCfg = Release|x86
-		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Release|x86.Build.0 = Release|x86
 		{55A26A21-A7A8-4BC4-A380-8DBE2BDFB561}.Debug|x86.ActiveCfg = Debug|x86
 		{55A26A21-A7A8-4BC4-A380-8DBE2BDFB561}.Debug|x86.Build.0 = Debug|x86
 		{55A26A21-A7A8-4BC4-A380-8DBE2BDFB561}.Release|x86.ActiveCfg = Release|x86
 		{55A26A21-A7A8-4BC4-A380-8DBE2BDFB561}.Release|x86.Build.0 = Release|x86
+		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Debug|x86.ActiveCfg = Debug|x86
+		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Debug|x86.Build.0 = Debug|x86
+		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Release|x86.ActiveCfg = Release|x86
+		{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}.Release|x86.Build.0 = Release|x86
 		{4ECDB88E-83F5-4385-9181-6A32B51E767A}.Debug|x86.ActiveCfg = Debug|x86
 		{4ECDB88E-83F5-4385-9181-6A32B51E767A}.Debug|x86.Build.0 = Debug|x86
 		{4ECDB88E-83F5-4385-9181-6A32B51E767A}.Release|x86.ActiveCfg = Release|x86
 		{4ECDB88E-83F5-4385-9181-6A32B51E767A}.Release|x86.Build.0 = Release|x86
-		{6AFA18E4-94A3-429F-877B-65E30FC84CF7}.Debug|x86.ActiveCfg = Debug|x86
-		{6AFA18E4-94A3-429F-877B-65E30FC84CF7}.Debug|x86.Build.0 = Debug|x86
-		{6AFA18E4-94A3-429F-877B-65E30FC84CF7}.Release|x86.ActiveCfg = Release|x86
-		{6AFA18E4-94A3-429F-877B-65E30FC84CF7}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

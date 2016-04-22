@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AFA18E4-94A3-429F-877B-65E30FC84CF7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>RoomClient</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PokemonBattle.RoomClient</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Compile Include="RoomClient\ChallengeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BattleRoom\Client\UserState.cs" />
+    <Compile Include="BattleRoom\Client\UserStateHelper.cs" />
+    <Compile Include="BattleRoom\Client\BattleLinkMode.cs" />
+    <Compile Include="BattleRoom\Client\BattleLinkModeHelper.cs" />
+    <Compile Include="BattleRoom\Client\User.cs" />
+    <Compile Include="BattleRoom\Client\ChallengeInfo.cs" />
+    <Compile Include="BattleRoom\Client\ObserveInfo.cs" />
+    <Compile Include="BattleRoom\Client\FourPlayerRoom.cs" />
+    <Compile Include="BattleRoom\Client\RoomBattleSetting.cs" />
+    <Compile Include="BattleRoom\Client\UserSequence.cs" />
+    <Compile Include="BattleRoom\Client\FourPlayerRoomSequence.cs" />
+    <Compile Include="BattleRoom\Client\EnumRoomMethods.cs" />
+    <Compile Include="BattleRoom\Client\RoomClientHelper.cs" />
+    <Compile Include="BattleRoom\Client\IRoomClientService.cs" />
+    <Compile Include="RoomClient\ChatDelegate.cs" />
+    <Compile Include="RoomClient\ChatManager.cs" />
+    <Compile Include="RoomClient\ChallengeManager.cs" />
+    <Compile Include="RoomClient\BuildServerFormDelegate.cs" />
+    <Compile Include="RoomClient\BuildClientFormDelegate.cs" />
+    <Compile Include="RoomClient\BuildAgentFormDelegate.cs" />
+    <Compile Include="RoomClient\BuildObserverFormDelegate.cs" />
+    <Compile Include="RoomClient\BuildFourPlayerFormDelegate.cs" />
+    <Compile Include="RoomClient\FourPlayerFormCallback.cs" />
+    <Compile Include="RoomClient\RoomClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClient\UserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClient\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomClient\AgentBattleInfo.cs" />
+    <Compile Include="RoomClient\ListViewSorter.cs" />
+    <Compile Include="RoomClient\UserListDelegate.cs" />
+    <Compile Include="RoomClient\UserDelegate.cs" />
+    <Compile Include="RoomClient\IdentityDelegate.cs" />
+    <Compile Include="RoomClient\MessageDelegate.cs" />
+    <Compile Include="RoomClient\IdentityMessageDelegate.cs" />
+    <Compile Include="RoomClient\ReceiveChallengeDelegate.cs" />
+    <Compile Include="RoomClient\AgentBattleDelegate.cs" />
+    <Compile Include="RoomClient\BuildServerDelegate.cs" />
+    <Compile Include="RoomClient\DirectBattleDelegate.cs" />
+    <Compile Include="RoomClient\ObserveBattleDelegate.cs" />
+    <Compile Include="RoomClient\FourPlayerRoomListDelegate.cs" />
+    <Compile Include="RoomClient\SettingDelegate.cs" />
+    <Compile Include="RoomClient\RoomClient.cs" />
+    <Compile Include="RoomClient\BroadcastController.cs" />
+    <Compile Include="RoomClient\Properties\Settings.cs" />
+    <EmbeddedResource Include="PokemonBattle.RoomClient.ChallengeForm.resources" />
+    <EmbeddedResource Include="PokemonBattle.RoomClient.RoomClientForm.resources" />
+    <EmbeddedResource Include="PokemonBattle.RoomClient.UserInfoForm.resources" />
+    <EmbeddedResource Include="PokemonBattle.RoomClient.ChatForm.resources" />
+  </ItemGroup>
+</Project>

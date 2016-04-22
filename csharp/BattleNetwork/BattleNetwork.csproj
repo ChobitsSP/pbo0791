@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55A26A21-A7A8-4BC4-A380-8DBE2BDFB561}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>BattleNetwork</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PokemonBattle</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="FourPlayer\Server\EnumFourPlayerMethods.cs" />
+    <Compile Include="FourPlayer\Server\FourPlayerServerHelper.cs" />
+    <Compile Include="FourPlayer\Server\IFourPlayerServerService.cs" />
+    <Compile Include="BattleNetwork\Client\EnumPokemonBattleMethods.cs" />
+    <Compile Include="BattleNetwork\Client\PokemonBattleClientHelper.cs" />
+    <Compile Include="BattleNetwork\Client\IPokemonBattleClientService.cs" />
+    <Compile Include="BattleNetwork\SetMoveDelegate.cs" />
+    <Compile Include="BattleNetwork\SetTeamDelegate.cs" />
+    <Compile Include="BattleNetwork\SetRulesDelegate.cs" />
+    <Compile Include="BattleNetwork\TieDelegate.cs" />
+    <Compile Include="BattleNetwork\SetRandomSeedDelegate.cs" />
+    <Compile Include="BattleNetwork\MessageDelegate.cs" />
+    <Compile Include="BattleNetwork\BattleInfoDelegate.cs" />
+    <Compile Include="BattleNetwork\SnapshotDelegate.cs" />
+    <Compile Include="BattleNetwork\PokemonBattleClient.cs" />
+    <Compile Include="BattleNetwork\BattleMove.cs" />
+    <Compile Include="BattleNetwork\BattleMoveHelper.cs" />
+    <Compile Include="BattleNetwork\PokemonIndex.cs" />
+    <Compile Include="BattleNetwork\PokemonIndexHelper.cs" />
+    <Compile Include="BattleNetwork\TargetIndex.cs" />
+    <Compile Include="BattleNetwork\TargetIndexHelper.cs" />
+    <Compile Include="BattleNetwork\BattleMode.cs" />
+    <Compile Include="BattleNetwork\BattleModeHelper.cs" />
+    <Compile Include="BattleNetwork\TieMessage.cs" />
+    <Compile Include="BattleNetwork\TieMessageHelper.cs" />
+    <Compile Include="BattleNetwork\BattleRule.cs" />
+    <Compile Include="BattleNetwork\BattleRuleHelper.cs" />
+    <Compile Include="BattleNetwork\BattleTerrain.cs" />
+    <Compile Include="BattleNetwork\BattleTerrainHelper.cs" />
+    <Compile Include="BattleNetwork\PlayerMove.cs" />
+    <Compile Include="BattleNetwork\BattleSnapshot.cs" />
+    <Compile Include="BattleNetwork\PokemonSnapshot.cs" />
+    <Compile Include="BattleNetwork\BattleInfo.cs" />
+    <Compile Include="BattleNetwork\ByteSequence.cs" />
+    <Compile Include="BattleNetwork\BattleRuleSequence.cs" />
+    <Compile Include="BattleNetwork\PokemonSnapshotSequence.cs" />
+    <Compile Include="BattleNetwork\Server\EnumPokemonBattleMethods.cs" />
+    <Compile Include="BattleNetwork\Server\PokemonBattleServerHelper.cs" />
+    <Compile Include="BattleNetwork\Server\IPokemonBattleServerService.cs" />
+    <Compile Include="BattleNetwork\BattleAgentServer.cs" />
+    <Compile Include="BattleNetwork\ClientConnectedDelegate.cs" />
+    <Compile Include="BattleNetwork\RequestBattleInfoDelegate.cs" />
+    <Compile Include="BattleNetwork\ServerTieDelegate.cs" />
+    <Compile Include="BattleNetwork\PokemonBattleServer.cs" />
+    <Compile Include="FourPlayer\Client\EnumFourPlayerMethods.cs" />
+    <Compile Include="FourPlayer\Client\FourPlayerClientHelper.cs" />
+    <Compile Include="FourPlayer\Client\IFourPlayerClientService.cs" />
+    <Compile Include="BattleNetwork\ServerPort.cs" />
+    <Compile Include="BattleNetwork\UpdateCountDelegate.cs" />
+    <Compile Include="BattleNetwork\RemoveDelegate.cs" />
+    <Compile Include="BattleNetwork\FourPlayerAgentServer.cs" />
+    <Compile Include="BattleNetwork\BattleAgent.cs" />
+    <Compile Include="BattleNetwork\SetPositionDelegate.cs" />
+    <Compile Include="BattleNetwork\MyPositionDelegate.cs" />
+    <Compile Include="BattleNetwork\IdentityDelegate.cs" />
+    <Compile Include="BattleNetwork\FourPlayerClient.cs" />
+    <Compile Include="BattleNetwork\BattleAgentSession.cs" />
+    <Compile Include="BattleNetwork\FourPlayerServer.cs" />
+    <Compile Include="BattleNetwork\FourPlayerAgent.cs" />
+    <Compile Include="BattleNetwork\FourPlayerSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetworkLib\NetworkLib.csproj">
+      <Project>{d082dc2a-9bd0-4109-a4db-bfcbea001031}</Project>
+      <Name>NetworkLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

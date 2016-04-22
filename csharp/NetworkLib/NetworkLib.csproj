@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D082DC2A-9BD0-4109-A4DB-BFCBEA001031}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>NetworkLib</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>NetworkLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Compile Include="Utilities\LogLevel.cs" />
+    <Compile Include="Utilities\ILogManager.cs" />
+    <Compile Include="Utilities\TraceLogManager.cs" />
+    <Compile Include="INetworkWorker.cs" />
+    <Compile Include="SocketNetworkWorker.cs" />
+    <Compile Include="Tcp\TcpNetworkWorker.cs" />
+    <Compile Include="IConnector.cs" />
+    <Compile Include="Tcp\TcpConnector.cs" />
+    <Compile Include="NetworkException.cs" />
+    <Compile Include="Tcp\TcpNetworkException.cs" />
+    <Compile Include="Utilities\ConsoleLogManager.cs" />
+    <Compile Include="Udp\UdpNetworkWorker.cs" />
+    <Compile Include="IReactor.cs" />
+    <Compile Include="Udp\UdpReactor.cs" />
+    <Compile Include="Udp\UdpStateObject.cs" />
+    <Compile Include="Udp\UdpNetworkException.cs" />
+    <Compile Include="INetworkStrategy.cs" />
+    <Compile Include="VoidFunctionDelegate.cs" />
+    <Compile Include="IntFunctionDelegate.cs" />
+    <Compile Include="DoubleFunctionDelegate.cs" />
+    <Compile Include="NetworkEventDelegate.cs" />
+    <Compile Include="NetworkErrorDelegate.cs" />
+    <Compile Include="IOErrorDelegate.cs" />
+    <Compile Include="AcceptReactorDelegate.cs" />
+    <Compile Include="HandleReadBufferDelegate.cs" />
+    <Compile Include="SessionRemovingDelegate.cs" />
+    <Compile Include="SessionDisconnectedDelegate.cs" />
+    <Compile Include="SessionReceivedDelegate.cs" />
+    <Compile Include="Utilities\BufferOverflowException.cs" />
+    <Compile Include="ClientSession.cs" />
+    <Compile Include="NetworkWorker.cs" />
+    <Compile Include="Utilities\Logger.cs" />
+    <Compile Include="IProtocolInterpreter.cs" />
+    <Compile Include="Utilities\ByteArray.cs" />
+    <Compile Include="Utilities\ThreadUpdater.cs" />
+    <Compile Include="Utilities\PerformanceTimer.cs" />
+    <Compile Include="Utilities\ReflectionHelper.cs" />
+    <Compile Include="Tcp\TcpReactor.cs" />
+    <Compile Include="IAcceptor.cs" />
+    <Compile Include="Tcp\TcpAcceptor.cs" />
+    <Compile Include="Udp\UdpConnector.cs" />
+    <Compile Include="NetworkClient.cs" />
+    <Compile Include="Udp\UdpNetworkStrategy.cs" />
+    <Compile Include="Utilities\ValBytes.cs" />
+    <Compile Include="Tcp\TcpNetworkStrategy.cs" />
+    <Compile Include="Udp\UdpAcceptor.cs" />
+    <Compile Include="NetworkServer.cs" />
+  </ItemGroup>
+</Project>
